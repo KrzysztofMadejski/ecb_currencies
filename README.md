@@ -21,3 +21,12 @@ To expose an API run the server
 ```bash
 python manage.py runserver
 ```
+
+## TODOs
+
+- Store crawled currencies in the database
+- Create setup.py: specify Python version (Python 3.6.7) + document the app
+- Create proper error handling in REST responses `{errors: {msg: code:}`
+- Add Swagger documentation: https://github.com/axnsan12/drf-yasg/#installation
+- Prepare for production deployment (Docker, etc)
+- Write simple scraper test than crawls the ECB website and makes sure something is retrieved. As it requires internet connection make sure it is not run by default
