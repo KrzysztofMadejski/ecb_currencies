@@ -1,0 +1,52 @@
+[
+{
+    "model": "currencies.exchangerate",
+    "pk": 1,
+    "fields": {
+        "target_currency": "CAD",
+        "base_currency": "EUR",
+        "rate": "1.1508",
+        "at": "2019-04-21T19:36:29Z"
+    }
+},
+{
+    "model": "currencies.exchangerate",
+    "pk": 2,
+    "fields": {
+        "target_currency": "CAD",
+        "base_currency": "EUR",
+        "rate": "1.1599",
+        "at": "2019-04-21T18:36:45Z"
+    }
+},
+{
+    "model": "currencies.exchangerate",
+    "pk": 3,
+    "fields": {
+        "target_currency": "GBP",
+        "base_currency": "EUR",
+        "rate": "0.8647",
+        "at": "2019-04-21T19:49:35Z"
+    }
+},
+{
+    "model": "currencies.exchangerate",
+    "pk": 4,
+    "fields": {
+        "target_currency": "GBP",
+        "base_currency": "EUR",
+        "rate": "0.8539",
+        "at": "2019-04-20T19:53:18Z"
+    }
+},
+{
+    "model": "currencies.exchangerate",
+    "pk": 5,
+    "fields": {
+        "target_currency": "USD",
+        "base_currency": "EUR",
+        "rate": "1.2000",
+        "at": "2019-04-21T19:53:46Z"
+    }
+}
+]
