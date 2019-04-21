@@ -26,31 +26,31 @@ class ExchangeRateTests(APITestCase):
         response = self.client.get('/v1/history/EUR/GBP')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data, [
+        self.assertEqual(json.loads(response.content), [
             {
-                "rate": 0.8647,
-                "at": "2019-04-21T19:49:35Z"
+                "rate": "0.8539",
+                "at": "2019-04-20T19:53:18Z"
             },
             {
-                "rate": 0.8539,
-                "at": "2019-04-20T19:53:18Z"
+                "rate": "0.8647",
+                "at": "2019-04-21T19:49:35Z"
             }
         ])
 
-    def test_rate_history_chronolic(self):
+    def test_rate_history_chronologic(self):
         """
         Tests history of a given exchange rate
         """
         response = self.client.get('/v1/history/EUR/CAD')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data, [
+        self.assertEqual(json.loads(response.content), [
             {
-                "rate": 1.1599,
+                "rate": "1.1599", # TODO decimal should be serialized as real number
                 "at": "2019-04-21T18:36:45Z"
             },
             {
-                "rate": 1.1508,
+                "rate": "1.1508",
                 "at": "2019-04-21T19:36:29Z"
             },
         ])
