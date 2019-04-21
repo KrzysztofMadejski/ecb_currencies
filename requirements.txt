@@ -7,3 +7,6 @@ markdown ~= 3.1       # Markdown support for the browsable API.
 django-filter ~= 2.1 # Filtering support
 scrapy ~= 1.6 # Handling the scraping part
 python-dateutil ~= 2.8 # Parsing datetime
+
+
+django-extensions ~= 2.1 # Some helpful commands for development
