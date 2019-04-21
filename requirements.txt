@@ -1,0 +1,8 @@
+# Allowing for minor-version automatic updates
+# Saving only direct requirements and relying on tests to make sure indirect reqs and minor updates are working correctly
+
+Django ~= 2.2
+djangorestframework ~= 3.9 # REST framework
+markdown ~= 3.1       # Markdown support for the browsable API.
+django-filter ~= 2.1 # Filtering support
+scrapy ~= 1.6 # Handling the scraping part
