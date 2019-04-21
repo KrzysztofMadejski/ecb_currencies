@@ -1,9 +1,9 @@
-from django.test import TestCase
 from rest_framework import status
-from rest_framework.test import APISimpleTestCase
+from rest_framework.test import APITestCase
+import json
 
 
-class ExchangeRateTests(APISimpleTestCase):
+class ExchangeRateTests(APITestCase):
     fixtures = ['currencies.json']
 
     def test_available_conversions(self):
@@ -13,10 +13,11 @@ class ExchangeRateTests(APISimpleTestCase):
         response = self.client.get('/v1/conversions')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data, [
-            {'target': 'CAD', 'base': 'EUR'},
-            {'target': 'GBP', 'base': 'EUR'},
-            {'target': 'USD', 'base': 'EUR'}])
+        # TODO what is the best way to compare lists? response.data returns list of OrderedDicts..
+        self.assertEqual(json.loads(response.content), [
+            {'target_currency': 'CAD', 'base_currency': 'EUR'},
+            {'target_currency': 'GBP', 'base_currency': 'EUR'},
+            {'target_currency': 'USD', 'base_currency': 'EUR'}])
 
     def test_rate_history(self):
         """
