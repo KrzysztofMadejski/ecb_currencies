@@ -10,6 +10,12 @@ Python version: 3.6.7+
 pip install -r requirements.txt
 ```
 
+## Test
+
+```bash
+python manage.py test
+```
+
 ## Run
 
 To download currencies run
